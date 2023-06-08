@@ -46,7 +46,7 @@ addDialogueButton.addEventListener("click", (event) => {
               <option value="unitedKingdom">Велика Британія</option>
               <option value="CIS">СНД</option>
               <option value="OPEC">ОПЕК</option>
-              <option value="legitimacy">Легітимність</option>
+              <option value="science">Наука</option>
               <option value="unemployment">Безробіття</option>
               <option value="education">Освіта</option>
               <option value="medicine">Медицина</option>
@@ -326,8 +326,8 @@ addChoiceButton.addEventListener("click", (event) => {
               <input type="number" name="OPEC1" class="OPEC1 width-50" value="0">
           </div>
           <div>
-              <label for="legitimacy1">Легітимність</label>
-              <input type="number" name="legitimacy1" class="legitimacy1 width-50" value="0">
+              <label for="science1">Наука</label>
+              <input type="number" name="science1" class="science1 width-50" value="0">
           </div>
           <div>
               <label for="unemployment1">Безробіття</label>
@@ -400,8 +400,8 @@ addChoiceButton.addEventListener("click", (event) => {
               <input type="number" name="OPEC2" class="OPEC2 width-50" value="0">
           </div>
           <div>
-              <label for="legitimacy2">Легітимність</label>
-              <input type="number" name="legitimacy2" class="legitimacy2 width-50" value="0">
+              <label for="science2">Наука</label>
+              <input type="number" name="science2" class="science2 width-50" value="0">
           </div>
           <div>
               <label for="unemployment2">Безробіття</label>
@@ -485,7 +485,7 @@ addDecisionButton.addEventListener("click", (event) => {
               <option value="unitedKingdom">Велика Британія</option>
               <option value="CIS">СНД</option>
               <option value="OPEC">ОПЕК</option>
-              <option value="legitimacy">Легітимність</option>
+              <option value="science">Наука</option>
               <option value="unemployment">Безробіття</option>
               <option value="education">Освіта</option>
               <option value="medicine">Медицина</option>
@@ -621,8 +621,8 @@ addDecisionButton.addEventListener("click", (event) => {
                 <input type="number" name="OPEC" class="OPEC width-50" value="0">
             </div>
             <div>
-                <label for="legitimacy">Легітимність</label>
-                <input type="number" name="legitimacy" class="legitimacy width-50" value="0">
+                <label for="science">Наука</label>
+                <input type="number" name="science" class="science width-50" value="0">
             </div>
             <div>
                 <label for="unemployment">Безробіття</label>
@@ -760,8 +760,8 @@ addLawButton.addEventListener("click", (event) => {
               <input type="number" name="OPEC1" class="OPEC1 width-50" value="0">
           </div>
           <div>
-              <label for="legitimacy1">Легітимність</label>
-              <input type="number" name="legitimacy1" class="legitimacy1 width-50" value="0">
+              <label for="science1">Наука</label>
+              <input type="number" name="science1" class="science1 width-50" value="0">
           </div>
           <div>
               <label for="unemployment1">Безробіття</label>
@@ -834,8 +834,8 @@ addLawButton.addEventListener("click", (event) => {
               <input type="number" name="OPEC2" class="OPEC2 width-50" value="0">
           </div>
           <div>
-              <label for="legitimacy2">Легітимність</label>
-              <input type="number" name="legitimacy2" class="legitimacy2 width-50" value="0">
+              <label for="science2">Наука</label>
+              <input type="number" name="science2" class="science2 width-50" value="0">
           </div>
           <div>
               <label for="unemployment2">Безробіття</label>
@@ -974,7 +974,7 @@ generateButton.addEventListener("click", (event) => {
     let unitedKingdom1 = Number(choicesData[i].querySelector(".unitedKingdom1").value);
     let CIS1 = Number(choicesData[i].querySelector(".CIS1").value);
     let OPEC1 = Number(choicesData[i].querySelector(".OPEC1").value);
-    let legitimacy1 = Number(choicesData[i].querySelector(".legitimacy1").value);
+    let science1 = Number(choicesData[i].querySelector(".science1").value);
     let unemployment1 = Number(choicesData[i].querySelector(".unemployment1").value);
     let education1 = Number(choicesData[i].querySelector(".education1").value);
     let medicine1 = Number(choicesData[i].querySelector(".medicine1").value);
@@ -983,7 +983,7 @@ generateButton.addEventListener("click", (event) => {
 
     let characteristicsUpdateOption1 = {"budget":budget1, "navy":navy1, "airForces":airForces1, "infantry":infantry1, "machinery":machinery1,
     "europeanUnion":europeanUnion1, "china":china1, "africa":africa1, "unitedKingdom":unitedKingdom1, "CIS":CIS1, "OPEC":OPEC1,
-    "legitimacy":legitimacy1, "unemployment":unemployment1, "education":education1, "medicine":medicine1, "ecology":ecology1, "infrastructure":infrastructure1};
+    "science":science1, "unemployment":unemployment1, "education":education1, "medicine":medicine1, "ecology":ecology1, "infrastructure":infrastructure1};
 
     let budget2 = Number(choicesData[i].querySelector(".budget2").value);
     let navy2 = Number(choicesData[i].querySelector(".navy2").value);
@@ -996,7 +996,7 @@ generateButton.addEventListener("click", (event) => {
     let unitedKingdom2 = Number(choicesData[i].querySelector(".unitedKingdom2").value);
     let CIS2 = Number(choicesData[i].querySelector(".CIS2").value);
     let OPEC2 = Number(choicesData[i].querySelector(".OPEC2").value);
-    let legitimacy2 = Number(choicesData[i].querySelector(".legitimacy2").value);
+    let science2 = Number(choicesData[i].querySelector(".science2").value);
     let unemployment2 = Number(choicesData[i].querySelector(".unemployment2").value);
     let education2 = Number(choicesData[i].querySelector(".education2").value);
     let medicine2 = Number(choicesData[i].querySelector(".medicine2").value);
@@ -1005,7 +1005,7 @@ generateButton.addEventListener("click", (event) => {
 
     let characteristicsUpdateOption2 = {"budget":budget2, "navy":navy2, "airForces":airForces2, "infantry":infantry2, "machinery":machinery2,
     "europeanUnion":europeanUnion2, "china":china2, "africa":africa2, "unitedKingdom":unitedKingdom2, "CIS":CIS2, "OPEC":OPEC2,
-    "legitimacy":legitimacy2, "unemployment":unemployment2, "education":education2, "medicine":medicine2, "ecology":ecology2, "infrastructure":infrastructure2};
+    "science":science2, "unemployment":unemployment2, "education":education2, "medicine":medicine2, "ecology":ecology2, "infrastructure":infrastructure2};
 
     choices[i] = {"choiceID":choiceID, "option1":option1, "option2":option2, "characteristicsUpdateOption1":characteristicsUpdateOption1,
     "characteristicsUpdateOption2":characteristicsUpdateOption2};
@@ -1059,7 +1059,7 @@ generateButton.addEventListener("click", (event) => {
       let unitedKingdom = Number(optionsData[j].querySelector(".unitedKingdom").value);
       let CIS = Number(optionsData[j].querySelector(".CIS").value);
       let OPEC = Number(optionsData[j].querySelector(".OPEC").value);
-      let legitimacy = Number(optionsData[j].querySelector(".legitimacy").value);
+      let science = Number(optionsData[j].querySelector(".science").value);
       let unemployment = Number(optionsData[j].querySelector(".unemployment").value);
       let education = Number(optionsData[j].querySelector(".education").value);
       let medicine = Number(optionsData[j].querySelector(".medicine").value);
@@ -1068,7 +1068,7 @@ generateButton.addEventListener("click", (event) => {
 
       let characteristicUpdate = {"budget":budget, "navy":navy, "airForces":airForces, "infantry":infantry, "machinery":machinery,
       "europeanUnion":europeanUnion, "china":china, "africa":africa, "unitedKingdom":unitedKingdom, "CIS":CIS, "OPEC":OPEC,
-      "legitimacy":legitimacy, "unemployment":unemployment, "education":education, "medicine":medicine, "ecology":ecology, "infrastructure":infrastructure};
+      "science":science, "unemployment":unemployment, "education":education, "medicine":medicine, "ecology":ecology, "infrastructure":infrastructure};
 
       characteristicUpdates[j] = characteristicUpdate;
     }
@@ -1104,7 +1104,7 @@ generateButton.addEventListener("click", (event) => {
     let unitedKingdom1 = Number(lawsData[i].querySelector(".unitedKingdom1").value);
     let CIS1 = Number(lawsData[i].querySelector(".CIS1").value);
     let OPEC1 = Number(lawsData[i].querySelector(".OPEC1").value);
-    let legitimacy1 = Number(lawsData[i].querySelector(".legitimacy1").value);
+    let science1 = Number(lawsData[i].querySelector(".science1").value);
     let unemployment1 = Number(lawsData[i].querySelector(".unemployment1").value);
     let education1 = Number(lawsData[i].querySelector(".education1").value);
     let medicine1 = Number(lawsData[i].querySelector(".medicine1").value);
@@ -1113,7 +1113,7 @@ generateButton.addEventListener("click", (event) => {
 
     let characteristicsUpdateWhenApplied = {"budget":budget1, "navy":navy1, "airForces":airForces1, "infantry":infantry1, "machinery":machinery1,
     "europeanUnion":europeanUnion1, "china":china1, "africa":africa1, "unitedKingdom":unitedKingdom1, "CIS":CIS1, "OPEC":OPEC1,
-    "legitimacy":legitimacy1, "unemployment":unemployment1, "education":education1, "medicine":medicine1, "ecology":ecology1, "infrastructure":infrastructure1};
+    "science":science1, "unemployment":unemployment1, "education":education1, "medicine":medicine1, "ecology":ecology1, "infrastructure":infrastructure1};
 
     let budget2 = Number(lawsData[i].querySelector(".budget2").value);
     let navy2 = Number(lawsData[i].querySelector(".navy2").value);
@@ -1126,7 +1126,7 @@ generateButton.addEventListener("click", (event) => {
     let unitedKingdom2 = Number(lawsData[i].querySelector(".unitedKingdom2").value);
     let CIS2 = Number(lawsData[i].querySelector(".CIS2").value);
     let OPEC2 = Number(lawsData[i].querySelector(".OPEC2").value);
-    let legitimacy2 = Number(lawsData[i].querySelector(".legitimacy2").value);
+    let science2 = Number(lawsData[i].querySelector(".science2").value);
     let unemployment2 = Number(lawsData[i].querySelector(".unemployment2").value);
     let education2 = Number(lawsData[i].querySelector(".education2").value);
     let medicine2 = Number(lawsData[i].querySelector(".medicine2").value);
@@ -1135,7 +1135,7 @@ generateButton.addEventListener("click", (event) => {
 
     let characteristicsUpdateWhenDeclined = {"budget":budget2, "navy":navy2, "airForces":airForces2, "infantry":infantry2, "machinery":machinery2,
     "europeanUnion":europeanUnion2, "china":china2, "africa":africa2, "unitedKingdom":unitedKingdom2, "CIS":CIS2, "OPEC":OPEC2,
-    "legitimacy":legitimacy2, "unemployment":unemployment2, "education":education2, "medicine":medicine2, "ecology":ecology2, "infrastructure":infrastructure2};
+    "science":science2, "unemployment":unemployment2, "education":education2, "medicine":medicine2, "ecology":ecology2, "infrastructure":infrastructure2};
 
     laws[i] = {"lawID":lawID, "lockedByDecision":lockedByDecision, "lockedByDialogue":lockedByDialogue, "lawType":lawType,
     "header":header, "mainText":mainText, "detailedText":detailedText, "preparedBy":preparedBy, "characteristicsUpdateWhenApplied":characteristicsUpdateWhenApplied,
