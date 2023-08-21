@@ -948,7 +948,7 @@ generateButton.addEventListener("click", (event) => {
     }
 
     dialogues[i] = {"dialogueID":dialogueID, "lockedByDecision":lockedByDecision, "lockedByLaw":lockedByLaw,
-    "condition":condition, "imageName":imageName,"characterName":characterName, "replicas":replicas, "choiceID":choiceID,
+    "condition":condition, "backgroundImageName":"", "imageName":imageName,"characterName":characterName, "replicas":replicas, "choiceID":choiceID,
     "subDialogueOption1":subdialogueOption1, "subDialogueOption2":subdialogueOption2};
   }
 
