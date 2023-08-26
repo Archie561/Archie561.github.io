@@ -25,7 +25,7 @@ body {
     font-weight: 900;
     color: white;
 }
-#generate-button-container {
+#generate-button-container, #news-and-scenes-container {
     display: flex;
     justify-content: center;
     margin-top: 25px;
@@ -138,4 +138,9 @@ body {
 #generated-json {
     word-wrap: break-word;
     max-width: 1000px;
+}
+
+#news-and-scenes {
+    text-decoration: none;
+    color: black;
 }
