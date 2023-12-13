@@ -29,7 +29,6 @@ body {
     width: 49%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
 }
 .news-form, .scene-form {
     background-color: #1abc9c;
