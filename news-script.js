@@ -373,6 +373,7 @@ generateScenesButton.addEventListener("click", (event) => {
       let frameImageName = [];
       let frameDuration = [];
       let frameAnimationType = [];
+      let frameParticlesType = [];
   
       let frames = [];
   
