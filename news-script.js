@@ -259,11 +259,23 @@ addSceneButton.addEventListener("click", (event) => {
             <label for="frame-duration">Тривалість кадру (с):</label>
             <input class="frame-duration  width-50" name="frame-duration" type="number">
         </div>
-        <div style="margin-bottom: 10px;">
+        <div>
             <label for="animation-type">Тип анімації:</label>
             <select class="animation-type" name="animation-type">
-                <option value="1">Зближення</option>
-                <option value="2">Віддалення</option>
+                <option value="">Без анімацій</option>
+                <option value="zoomIn">Зближення</option>
+                <option value="zoomOut">Віддалення</option>
+                <option value="moveLeft">Рух вліво</option>
+                <option value="moveRight">Рух вправо</option>
+            </select>
+        </div>
+        <div style="margin-bottom: 10px;">
+            <label for="particles-type">Тип частичок:</label>
+            <select class="particles-type" name="particles-type">
+                <option value="">Без частичок</option>
+                <option value="snow">Сніг</option>
+                <option value="rain">Дощ</option>
+                <option value="dust">Пилюка</option>
             </select>
         </div>
 
@@ -368,6 +380,7 @@ generateScenesButton.addEventListener("click", (event) => {
         frameImageName[j] = framesData[j].querySelector(".background-image-name").value;
         frameDuration[j] = Number(framesData[j].querySelector(".frame-duration").value);
         frameAnimationType[j] = framesData[j].querySelector(".animation-type").value;
+        frameParticlesType[j] = framesData[j].querySelector(".particles-type").value;
   
 
         let frameCharactersData = framesData[j].getElementsByClassName("character-container");
@@ -385,7 +398,7 @@ generateScenesButton.addEventListener("click", (event) => {
         }
 
         frames.push({"backgroundImage":frameImageName[j], "frameDuration":frameDuration[j], "animationType":frameAnimationType[j],
-        "characterNames":characterName, "characterDurations":characterDuration, "characterPositions":characterPosition, "characterSubtitles":characterSubtitles});
+        "particlesType":frameParticlesType[j], "characterNames":characterName, "characterDurations":characterDuration, "characterPositions":characterPosition, "characterSubtitles":characterSubtitles});
       }
   
       cutscenes[i] = {"sceneID":sceneID, "condition":condition, "voiceFileName":voiceFileName, "frames":frames};
