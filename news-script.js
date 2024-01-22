@@ -267,6 +267,8 @@ addSceneButton.addEventListener("click", (event) => {
                 <option value="zoomOut">Віддалення</option>
                 <option value="moveLeft">Рух вліво</option>
                 <option value="moveRight">Рух вправо</option>
+                <option value="moveUp">Рух вгору</option>
+                <option value="moveDown">Рух вниз</option>
             </select>
         </div>
         <div style="margin-bottom: 10px;">
