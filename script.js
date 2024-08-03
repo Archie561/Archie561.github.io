@@ -901,55 +901,43 @@ generateButton.addEventListener("click", (event) => {
     let condition = {"isUsed":isUsed, "characteristicName":characteristicName, "characteristicValue":characteristicValue,
     "choiceChapterID":choiceChapterID, "choiceID":conditionChoiceID, "choiceValue":choiceValue, "decisionChapterID":decisionChapterID,
     "decisionID":decisionID, "decisionValue":decisionValue};
-
-
+    
     let replicasData = dialoguesData[i].getElementsByClassName("dialogue-replica-container");
-    let imageName = [];
-    let characterName = [];
     let replicas = [];
-    let choiceID = [];
-
-    let subdialogueOption1 = [];
-    let subdialogueOption2 = [];
 
     for (let j = 0; j < replicasData.length; j++) {
-      imageName[j] = replicasData[j].querySelector(".dialogue-image-name").value;
-      characterName[j] = replicasData[j].querySelector(".dialogue-character-name").value;
-      replicas[j] = replicasData[j].querySelector(".dialogue-replica").value;
-      choiceID[j] = Boolean(replicasData[j].querySelector(".dialogue-replica-display-choice").checked) ? Number(replicasData[j].querySelector(".dialogue-replica-choice-id").value) : -1;
+        let imageName = replicasData[j].querySelector(".dialogue-image-name").value;
+        let characterName = replicasData[j].querySelector(".dialogue-character-name").value;
+        let replicaText = replicasData[j].querySelector(".dialogue-replica").value;
+        let choiceID = Boolean(replicasData[j].querySelector(".dialogue-replica-display-choice").checked) ? Number(replicasData[j].querySelector(".dialogue-replica-choice-id").value) : -1;
 
-      if (Boolean(replicasData[j].querySelector(".dialogue-replica-display-choice").checked)) {
         let subreplicas1Data = replicasData[j].getElementsByClassName("subdialogue-option-1");
         let subreplicas2Data = replicasData[j].getElementsByClassName("subdialogue-option-2");
 
-        let subImageName1 = [];
-        let subCharacterName1 = [];
-        let subreplica1 = [];
-
-        let subImageName2 = [];
-        let subCharacterName2 = [];
-        let subreplica2 = [];
+        let subreplicas1 = [];
+        let subreplicas2 = [];
 
         for (let k = 0; k < subreplicas1Data.length; k++) {
-          subImageName1[k] = subreplicas1Data[k].querySelector(".subdialogue1-image-name").value;
-          subCharacterName1[k] = subreplicas1Data[k].querySelector(".subdialogue1-character-name").value;
-          subreplica1[k] = subreplicas1Data[k].querySelector(".subdialogue1-replica").value;
+            let subImageName1 = subreplicas1Data[k].querySelector(".subdialogue1-image-name").value;
+            let subCharacterName1 = subreplicas1Data[k].querySelector(".subdialogue1-character-name").value;
+            let subreplica1Text = subreplicas1Data[k].querySelector(".subdialogue1-replica").value;
+
+            subreplicas1.push({"imageName":subImageName1, "characterName":subCharacterName1, "subReplicaText":subreplica1Text});
         }
 
         for (let k = 0; k < subreplicas2Data.length; k++) {
-          subImageName2[k] = subreplicas2Data[k].querySelector(".subdialogue2-image-name").value;
-          subCharacterName2[k] = subreplicas2Data[k].querySelector(".subdialogue2-character-name").value;
-          subreplica2[k] = subreplicas2Data[k].querySelector(".subdialogue2-replica").value;
+            let subImageName2 = subreplicas2Data[k].querySelector(".subdialogue2-image-name").value;
+            let subCharacterName2 = subreplicas2Data[k].querySelector(".subdialogue2-character-name").value;
+            let subreplica2Text = subreplicas2Data[k].querySelector(".subdialogue2-replica").value;
+
+            subreplicas2.push({"imageName":subImageName2, "characterName":subCharacterName2, "subReplicaText":subreplica2Text});
         }
 
-        subdialogueOption1.push({"imageName":subImageName1, "characterName":subCharacterName1, "replicas":subreplica1});
-        subdialogueOption2.push({"imageName":subImageName2, "characterName":subCharacterName2, "replicas":subreplica2});
-      }
+        replicas.push({"imageName":imageName, "characterName":characterName, "replicaText":replicaText, "choiceID":choiceID, "subreplicasOption1":subreplicas1, "subreplicasOption2":subreplicas2});
     }
 
     dialogues[i] = {"dialogueID":dialogueID, "lockedByDecision":lockedByDecision, "lockedByLaw":lockedByLaw,
-    "condition":condition, "backgroundImageName":"", "imageName":imageName,"characterName":characterName, "replicas":replicas, "choiceID":choiceID,
-    "subDialogueOption1":subdialogueOption1, "subDialogueOption2":subdialogueOption2};
+    "condition":condition, "backgroundImageName":"background01", "replicas":replicas};
   }
 
 
